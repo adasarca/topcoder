@@ -1,8 +1,8 @@
 /*
- * Created by AdelaSarca
+ * Created by Adela.Sarca
  * Date: 11/14/2019
  */
-package com.example.topcoder;
+package com.example.topcoder.sorting;
 
 public class CostOfDancing {
 
