@@ -17,16 +17,20 @@ public class ThePalindrome {
         int n = chars.length;
         boolean pal[][] = new boolean[n][n];
 
+        //initialize dp with palindromes of 1 and 2
         for (int i = 0; i < n - 1; i++) {
             pal[i][i] = true;
-            pal[i+1][i] = true;
+            if (chars[i] == chars[i + 1]) {
+                pal[i][i + 1] = true;
+            }
         }
-        pal[n-1][n-1] = true;
+        pal[n - 1][n - 1] = true;
 
-        for (int k = 1; k < n; k++) {
+        //search for longer palindromes
+        for (int k = 2; k < n; k++) {
             for (int i = 0; i < n - k; i++) {
                 int j = i + k;
-                pal[i][j] = chars[i] == chars[j] && pal[i+1][j-1];
+                pal[i][j] = chars[i] == chars[j] && pal[i + 1][j - 1];
             }
         }
 
