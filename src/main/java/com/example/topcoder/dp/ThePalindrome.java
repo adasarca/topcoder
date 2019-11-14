@@ -4,6 +4,12 @@
  */
 package com.example.topcoder.dp;
 
+/*
+* John and Brus are studying string theory at the university. Brus likes palindromes very much. A palindrome is a word that reads the same forward and backward.
+* John would like to surprise Brus by taking a s, and appending 0 or more characters to the end of s to obtain a palindrome.
+* He wants that palindrome to be as short as possible. Return the shortest possible length of a palindrome that John can generate.
+*/
+
 public class ThePalindrome {
 
     public int find(String s) {
