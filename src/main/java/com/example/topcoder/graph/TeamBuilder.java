@@ -14,36 +14,27 @@ public class TeamBuilder {
 
     public int[] specialLocations(String[] paths) {
         int n = paths.length;
-        int[][] dist = new int[n+1][n+1];
+        boolean[][] reachable = new boolean[n][n];
         int[] in = new int[n];
         int[] out = new int[n];
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                if (paths[i].charAt(j) == '1') {
-                    dist[i][j] = 1;
+                if (paths[i].charAt(j) == '1' || i == j) {
+                    reachable[i][j] = true;
                     out[i]++;
                     in[j]++;
-                } else {
-                    dist[i][j] = Integer.MAX_VALUE;
                 }
-            }
-            if (dist[i][i] == Integer.MAX_VALUE) {
-                dist[i][i] = 0;
-                out[i]++;
-                in[i]++;
             }
         }
 
         for (int k = 0; k < n; k++) {
             for (int i = 0; i < n; i++) {
                 for (int j = 0; j < n; j++) {
-                    if (dist[i][k] != Integer.MAX_VALUE && dist[k][j] != Integer.MAX_VALUE && dist[i][j] > dist[i][k] + dist[k][j]) {
-                        if (dist[i][j] == Integer.MAX_VALUE) {
-                            out[i]++;
-                            in[j]++;
-                        }
-                        dist[i][j] = dist[i][k] + dist[k][j];
+                    if (!reachable[i][j] && reachable[i][k] && reachable[k][j]) {
+                        reachable[i][j] = true;
+                        out[i]++;
+                        in[j]++;
                     }
                 }
             }
