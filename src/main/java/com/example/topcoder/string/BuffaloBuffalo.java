@@ -8,6 +8,21 @@ public class BuffaloBuffalo {
 
     public String check(String s) {
 
+        if (s.charAt(0) == ' ' || s.charAt(s.length() - 1) == ' ') {
+            return "Not good";
+        }
+
+        String[] words = s.split(" ");
+        for (int i = 0; i < words.length; i++) {
+            if (!"buffalo".equals(words[i])) {
+                return "Not good";
+            }
+        }
+        return "Good";
+    }
+
+    public String check2(String s) {
+
         int n = s.length();
         String notGood = "Not good";
         if (s.charAt(n - 1) == ' ') {
