@@ -19,7 +19,7 @@ public class SmoothPermutationsTest {
     }
 
     @Test
-    public void testCountPermutations() {
+    public void testCountPermutations0() {
         //setup
         int[] prefN = new int[]{5, 4};
         int[] prefK = new int[]{3, 2};
@@ -30,5 +30,19 @@ public class SmoothPermutationsTest {
 
         //verify
         assertEquals(count, 24);
+    }
+
+    @Test
+    public void testCountPermutations1() {
+        //setup
+        int[] prefN = new int[]{};
+        int[] prefK = new int[]{};
+        int[] prefX = new int[]{};
+
+        //test
+        long count = this.smoothPermutations.countPermutations(100, 999999937, 123456, 47, prefN, prefK, prefX);
+
+        //verify
+        assertEquals(count, 24359438587L);
     }
 }

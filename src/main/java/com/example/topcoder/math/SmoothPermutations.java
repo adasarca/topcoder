@@ -37,12 +37,16 @@ public class SmoothPermutations {
     }
 
     private long countPermutations(int n, int k, int x, int m) {
+        if (x < k) {
+            return 0;
+        }
+
         long result = 1;
 
         for (int i = x; i > x - k; i--) {
             result = (result * (i % m)) % m;
         }
-        for (int i = n - x; i > n - k; i--) {
+        for (int i = n - k; i > 1; i--) {
             result = (result * (i % m)) % m;
         }
         return result;
