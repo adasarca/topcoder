@@ -1,4 +1,4 @@
-package com.example.topcoder.codility.demo;
+package com.example.topcoder.extra.codility.demo;
 
 import java.util.HashSet;
 

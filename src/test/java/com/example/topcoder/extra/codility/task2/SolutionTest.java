@@ -1,4 +1,4 @@
-package com.example.topcoder.codility.task2;
+package com.example.topcoder.extra.codility.task2;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

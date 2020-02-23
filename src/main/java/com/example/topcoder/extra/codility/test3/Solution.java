@@ -1,4 +1,4 @@
-package com.example.topcoder.codility.test3;
+package com.example.topcoder.extra.codility.test3;
 
 /*
 * Given int N, calculate maximum number that can be obtained by inserting digit 5

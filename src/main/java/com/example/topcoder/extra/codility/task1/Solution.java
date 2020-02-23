@@ -1,4 +1,4 @@
-package com.example.topcoder.codility.task1;
+package com.example.topcoder.extra.codility.task1;
 
 import java.util.Arrays;
 

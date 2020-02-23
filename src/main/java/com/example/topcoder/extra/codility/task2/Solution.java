@@ -1,4 +1,4 @@
-package com.example.topcoder.codility.task2;
+package com.example.topcoder.extra.codility.task2;
 
 import java.util.Iterator;
 import java.util.LinkedList;
