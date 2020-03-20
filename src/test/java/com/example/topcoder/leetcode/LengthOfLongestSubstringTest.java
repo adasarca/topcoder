@@ -32,4 +32,13 @@ public class LengthOfLongestSubstringTest {
         assertEquals(length, 5);
     }
 
+    @Test
+    public void testLengthOfLongestSubstring2() throws Exception {
+        //test
+        int length = this.solution.lengthOfLongestSubstring("abcabcdd");
+
+        //verify
+        assertEquals(length, 4);
+    }
+
 }
