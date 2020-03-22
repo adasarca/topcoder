@@ -1,4 +1,4 @@
-package com.example.topcoder.leetcode;
+package com.example.topcoder.leetcode.combinatorics;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
